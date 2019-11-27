@@ -57,11 +57,25 @@ app.delete('/api/persons/:id', (req, res) => {
 app.post('/api/persons', (req, res) => {
     const randId = Math.round(Math.random()*100000)
     const body = req.body
-    console.log(body)
+    const name = body.name
+    const number = body.number
+    if(!(name && number)) {
+        return res.status(406).json({
+            error: 'missing name or number'
+        })
+    }
+
+    const existsAlready = notes.find(note => (note.name === name || note.number === number) )
+    if(existsAlready) {
+        return res.status(409).json({
+            error: 'Name or number already in phonebook'
+        })
+    }
+
     const person = {
         id: randId,
-        name: body.name,
-        number: body.number
+        name: name,
+        number: number
     }
 
     notes = notes.concat(person)
