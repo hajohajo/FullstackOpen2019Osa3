@@ -22,6 +22,14 @@ app.get('/api/persons', (req, res) => {
     res.json(notes)
 })
 
+app.get('/info', (req, res) => {
+    const numberOfPersons = notes.length
+    const date = new Date()
+    res.send(
+        `<p>Phonebook has info for ${numberOfPersons} people</p> <p>${date}</p>`
+    )
+})
+
 app.get('/api/persons/:id', (req, res) => {
     const id = Number(req.params.id)
     const note = notes.find(note => note.id === id)
