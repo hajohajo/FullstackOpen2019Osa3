@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b9373e2-2349-4fcc-a04d-969886b1d254" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-11-27T033320.409.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-11-27T033320.409.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +60,22 @@
           </option>
           <option name="haveTextToSend" value="true" />
           <option name="textToSend" value="{&quot;name&quot;: &quot;Pekka Posteljooni&quot;,&quot;number&quot;: &quot;050 0001111&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3001/api/persons" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;name&quot;: &quot;Pekka Posteljooni&quot;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
         <RestClientRequest>
@@ -167,7 +183,7 @@
       <updated>1574848425681</updated>
       <workItem from="1574848430730" duration="1291000" />
       <workItem from="1574849784164" duration="4031000" />
-      <workItem from="1574858721099" duration="2605000" />
+      <workItem from="1574858721099" duration="3435000" />
     </task>
     <task id="LOCAL-00001" summary="3.1 puhelinluettelon backend step1">
       <created>1574855899944</created>
@@ -197,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574860719970</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="3.6 puhelinluettelo: Oikeat virheviestit">
+      <created>1574861657607</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574861657607</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +282,7 @@
     <MESSAGE value="3.2 puhelinluettelon backend step2" />
     <MESSAGE value="3.2 puhelinluettelon backend step 3 ja 4" />
     <MESSAGE value="3.5 puhelinluettelo: Uuden tiedon lisäys" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.5 puhelinluettelo: Uuden tiedon lisäys" />
+    <MESSAGE value="3.6 puhelinluettelo: Oikeat virheviestit" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.6 puhelinluettelo: Oikeat virheviestit" />
   </component>
 </project>
