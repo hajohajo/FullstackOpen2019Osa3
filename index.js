@@ -11,7 +11,13 @@ let notes = [
         id: 2,
         name: "Minna Meikäläainen",
         number: "0507654321"
+    },
+    {
+        id: 3,
+        name: "Reino Removable",
+        number: "0000000000"
     }
+
 ]
 
 app.get('/', (req, res) => {
@@ -38,6 +44,12 @@ app.get('/api/persons/:id', (req, res) => {
     } else {
         res.status(404).end()
     }
+})
+
+app.delete('/api/persons/:id', (req, res) => {
+    const id = Number(req.params.id)
+    notes = notes.filter(note => note.id !== id)
+    res.status(204).end()
 })
 
 const port = 3001
