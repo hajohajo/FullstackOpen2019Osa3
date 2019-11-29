@@ -179,7 +179,7 @@
       <workItem from="1574848430730" duration="1291000" />
       <workItem from="1574849784164" duration="4031000" />
       <workItem from="1574858721099" duration="5279000" />
-      <workItem from="1574935359442" duration="10876000" />
+      <workItem from="1574935359442" duration="11177000" />
     </task>
     <task id="LOCAL-00001" summary="3.1 puhelinluettelon backend step1">
       <created>1574855899944</created>
@@ -307,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575034346533</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="3.11 debugging">
+      <created>1575035026555</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1575035026555</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
