@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const cors = require('cors')
+
 var morgan = require('morgan')
 morgan.token('body', function (req){
     if(req.method === "POST") {
@@ -12,6 +14,7 @@ morgan.token('body', function (req){
 
 app.use(bodyParser.json())
 app.use(morgan(':method :url :res[content-length] - :response-time ms :body'))
+app.use(cors())
 
 let notes = [
     {
@@ -61,6 +64,8 @@ app.get('/api/persons/:id', (req, res) => {
 app.delete('/api/persons/:id', (req, res) => {
     const id = Number(req.params.id)
     notes = notes.filter(note => note.id !== id)
+    console.log("Here!")
+    console.log(notes)
     res.status(204).end()
 })
 
@@ -69,6 +74,8 @@ app.post('/api/persons', (req, res) => {
     const body = req.body
     const name = body.name
     const number = body.number
+    console.log("POST")
+    console.log(body)
     if(!(name && number)) {
         return res.status(406).json({
             error: 'missing name or number'

@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4b9373e2-2349-4fcc-a04d-969886b1d254" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestHTTPRequests.http" beforeDir="false" afterPath="$PROJECT_DIR$/TestHTTPRequests.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +183,8 @@
       <updated>1574848425681</updated>
       <workItem from="1574848430730" duration="1291000" />
       <workItem from="1574849784164" duration="4031000" />
-      <workItem from="1574858721099" duration="4621000" />
+      <workItem from="1574858721099" duration="5279000" />
+      <workItem from="1574935359442" duration="4640000" />
     </task>
     <task id="LOCAL-00001" summary="3.1 puhelinluettelon backend step1">
       <created>1574855899944</created>
@@ -226,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574862600836</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="3.8* puhelinluettelo: Morgan custom token">
+      <created>1574863902185</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574863902185</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +281,9 @@
         </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -290,6 +301,7 @@
     <MESSAGE value="3.5 puhelinluettelo: Uuden tiedon lisäys" />
     <MESSAGE value="3.6 puhelinluettelo: Oikeat virheviestit" />
     <MESSAGE value="3.7 puhelinluettelo: Morgan" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.7 puhelinluettelo: Morgan" />
+    <MESSAGE value="3.8* puhelinluettelo: Morgan custom token" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.8* puhelinluettelo: Morgan custom token" />
   </component>
 </project>
