@@ -181,7 +181,7 @@
       <workItem from="1574848430730" duration="1291000" />
       <workItem from="1574849784164" duration="4031000" />
       <workItem from="1574858721099" duration="5279000" />
-      <workItem from="1574935359442" duration="8868000" />
+      <workItem from="1574935359442" duration="9652000" />
     </task>
     <task id="LOCAL-00001" summary="3.1 puhelinluettelon backend step1">
       <created>1574855899944</created>
@@ -288,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575032044523</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="3.11 debugging">
+      <created>1575032703925</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1575032703925</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,6 +368,7 @@
     <MESSAGE value="3.11 Including the static build..." />
     <MESSAGE value="3.11 Cleaned frontend" />
     <MESSAGE value="3.11 typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.11 typo" />
+    <MESSAGE value="3.11 debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.11 debugging" />
   </component>
 </project>
