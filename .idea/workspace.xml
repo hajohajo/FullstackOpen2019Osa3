@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b9373e2-2349-4fcc-a04d-969886b1d254" name="Default Changelist" comment="" />
+    <list default="true" id="4b9373e2-2349-4fcc-a04d-969886b1d254" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +181,7 @@
       <workItem from="1574848430730" duration="1291000" />
       <workItem from="1574849784164" duration="4031000" />
       <workItem from="1574858721099" duration="5279000" />
-      <workItem from="1574935359442" duration="7062000" />
+      <workItem from="1574935359442" duration="7838000" />
     </task>
     <task id="LOCAL-00001" summary="3.1 puhelinluettelon backend step1">
       <created>1574855899944</created>
@@ -244,7 +246,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575030325767</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="3.10: Backend toimii Herokussa">
+      <created>1575030642394</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575030642394</updated>
+    </task>
+    <task id="LOCAL-00011" summary="3.10: Backend toimii Herokussa">
+      <created>1575030757883</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1575030757883</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +328,7 @@
     <MESSAGE value="3.7 puhelinluettelo: Morgan" />
     <MESSAGE value="3.8* puhelinluettelo: Morgan custom token" />
     <MESSAGE value="PORT for heroku" />
-    <option name="LAST_COMMIT_MESSAGE" value="PORT for heroku" />
+    <MESSAGE value="3.10: Backend toimii Herokussa" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.10: Backend toimii Herokussa" />
   </component>
 </project>
