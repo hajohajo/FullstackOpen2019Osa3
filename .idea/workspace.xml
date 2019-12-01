@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4b9373e2-2349-4fcc-a04d-969886b1d254" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestHTTPRequests.http" beforeDir="false" afterPath="$PROJECT_DIR$/TestHTTPRequests.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/person.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/person.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +234,7 @@
       <workItem from="1574848430730" duration="1291000" />
       <workItem from="1574849784164" duration="4031000" />
       <workItem from="1574858721099" duration="5279000" />
-      <workItem from="1574935359442" duration="22011000" />
+      <workItem from="1574935359442" duration="22562000" />
     </task>
     <task id="LOCAL-00001" summary="3.1 puhelinluettelon backend step1">
       <created>1574855899944</created>
@@ -423,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575224326991</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="3.20* Minimipituus ja frontend virheilmoitus.">
+      <created>1575226048760</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1575226048760</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,6 +505,7 @@
     <MESSAGE value="3.15, 3.16 ja 3.17*: poistaminen ja päivittäminen backendiin, virheidenkäsittely middlewareen" />
     <MESSAGE value="3.18* api/persons/:id ja /info käsittely backendissä." />
     <MESSAGE value="3.19: ValidationError mongoose-unique-validatorilla" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.19: ValidationError mongoose-unique-validatorilla" />
+    <MESSAGE value="3.20* Minimipituus ja frontend virheilmoitus." />
+    <option name="LAST_COMMIT_MESSAGE" value="3.20* Minimipituus ja frontend virheilmoitus." />
   </component>
 </project>
