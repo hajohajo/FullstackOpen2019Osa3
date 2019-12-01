@@ -8,8 +8,10 @@ const Person = require('./models/person')
 const errorHandler = (error, request, response, next) => {
     console.error(error.message)
 
-    if(error.name === 'CastError' && error.kind == 'ObjectId') {
+    if(error.name === 'CastError' && error.kind === 'ObjectId') {
         return response.status(400).send({ error: 'malformatted id' })
+    } else if(error.name === 'ValidationError') {
+        return response.status(400).json({error: error.message})
     }
     next(error)
 }
@@ -69,7 +71,7 @@ app.get('/api/persons/:id', (req, res, next) => {
 
 app.delete('/api/persons/:id', (req, res, next) => {
     Person.findByIdAndRemove(req.params.id)
-        .then(result => {
+        .then(() => {
             res.status(204).end()
         })
         .catch(error => next(error))
@@ -91,34 +93,24 @@ app.put('/api/persons/:id', (req, res, next) => {
         .catch(error => next(error))
 })
 
-app.post('/api/persons', (req, res) => {
+app.post('/api/persons', (req, res, next) => {
     const body = req.body
 
     const name = body.name
     const number = body.number
-    if((name===undefined || number===undefined)) {
-        return res.status(406).json({
-            error: 'missing name or number'
-        })
-    }
-
-    const existsAlready = notes.find(note => (note.name === name || note.number === number) )
-    if(existsAlready) {
-        return res.status(409).json({
-            error: 'Name or number already in phonebook'
-        })
-    }
 
     const person = new Person({
         name: name,
         number: number
     })
 
-    person.save().then(savedPerson => {
+    person.save()
+        .then(savedPerson => {
         console.log("Saved a person")
         notes = notes.concat(savedPerson.toJSON())
         res.json(notes)
-    })
+        })
+        .catch(error=>next(error))
 })
 
 app.use(errorHandler)
