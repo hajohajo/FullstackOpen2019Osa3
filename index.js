@@ -5,6 +5,15 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const Person = require('./models/person')
 
+const errorHandler = (error, request, response, next) => {
+    console.error(error.message)
+
+    if(error.name === 'CastError' && error.kind == 'ObjectId') {
+        return response.status(400).send({ error: 'malformatted id' })
+    }
+    next(error)
+}
+
 var morgan = require('morgan')
 morgan.token('body', function (req){
     if(req.method === "POST") {
@@ -14,29 +23,10 @@ morgan.token('body', function (req){
     }
 })
 
+app.use(express.static('build'))
 app.use(bodyParser.json())
 app.use(morgan(':method :url :res[content-length] - :response-time ms :body'))
 app.use(cors())
-app.use(express.static('build'))
-
-let notes = [
-    {
-        id: 1,
-        name: "Matti Meikäläinen",
-        number: "0501234567"
-    },
-    {
-        id: 2,
-        name: "Minna Meikäläainen",
-        number: "0507654321"
-    },
-    {
-        id: 3,
-        name: "Reino Removable",
-        number: "0000000000"
-    }
-
-]
 
 app.get('/', (req, res) => {
     res.send('<h1>Hello World!</h1>')
@@ -58,7 +48,7 @@ app.get('/info', (req, res) => {
     )
 })
 
-app.get('/api/persons/:id', (req, res) => {
+app.get('/api/persons/:id', (req, res, next) => {
     Person.findById(req.params.id)
         .then(returnedPerson => {
             if (returnedPerson) {
@@ -67,18 +57,31 @@ app.get('/api/persons/:id', (req, res) => {
                 res.status(404).end()
             }
         })
-        .catch(error => {
-            console.log(error)
-            response.status(400).send({error: 'malformatted id'})
-        })
+        .catch(error => next(error))
 })
 
-app.delete('/api/persons/:id', (req, res) => {
-    const id = Number(req.params.id)
-    notes = notes.filter(note => note.id !== id)
-    console.log("Here!")
-    console.log(notes)
-    res.status(204).end()
+app.delete('/api/persons/:id', (req, res, next) => {
+    Person.findByIdAndRemove(req.params.id)
+        .then(result => {
+            res.status(204).end()
+        })
+        .catch(error => next(error))
+})
+
+app.put('/api/persons/:id', (req, res, next) => {
+    const body = req.body
+
+    const person = {
+        name: body.name,
+        number: body.number
+    }
+
+    Person.findByIdAndUpdate(req.params.id, person, { new: true })
+        .then(updatedPerson => {
+            console.log(updatedPerson)
+            res.json(updatedPerson.toJSON())
+        })
+        .catch(error => next(error))
 })
 
 app.post('/api/persons', (req, res) => {
@@ -110,6 +113,8 @@ app.post('/api/persons', (req, res) => {
         res.json(notes)
     })
 })
+
+app.use(errorHandler)
 
 const PORT = process.env.PORT
 app.listen(PORT, () => {
