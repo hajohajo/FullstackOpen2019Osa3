@@ -1,7 +1,9 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const Person = require('./models/person')
 
 var morgan = require('morgan')
 morgan.token('body', function (req){
@@ -41,7 +43,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/persons', (req, res) => {
-    res.json(notes)
+    Person.find({})
+        .then(returnedPersons => {
+            notes = returnedPersons.map(person => person.toJSON())
+            res.json(notes)
+        })
 })
 
 app.get('/info', (req, res) => {
@@ -53,13 +59,18 @@ app.get('/info', (req, res) => {
 })
 
 app.get('/api/persons/:id', (req, res) => {
-    const id = Number(req.params.id)
-    const note = notes.find(note => note.id === id)
-    if(note) {
-        res.json(note)
-    } else {
-        res.status(404).end()
-    }
+    Person.findById(req.params.id)
+        .then(returnedPerson => {
+            if (returnedPerson) {
+                res.json(returnedPerson.toJSON)
+            } else {
+                res.status(404).end()
+            }
+        })
+        .catch(error => {
+            console.log(error)
+            response.status(400).send({error: 'malformatted id'})
+        })
 })
 
 app.delete('/api/persons/:id', (req, res) => {
@@ -71,13 +82,11 @@ app.delete('/api/persons/:id', (req, res) => {
 })
 
 app.post('/api/persons', (req, res) => {
-    const randId = Math.round(Math.random()*100000)
     const body = req.body
+
     const name = body.name
     const number = body.number
-    console.log("POST")
-    console.log(body)
-    if(!(name && number)) {
+    if((name===undefined || number===undefined)) {
         return res.status(406).json({
             error: 'missing name or number'
         })
@@ -90,17 +99,19 @@ app.post('/api/persons', (req, res) => {
         })
     }
 
-    const person = {
-        id: randId,
+    const person = new Person({
         name: name,
         number: number
-    }
+    })
 
-    notes = notes.concat(person)
-    res.json(notes)
+    person.save().then(savedPerson => {
+        console.log("Saved a person")
+        notes = notes.concat(savedPerson.toJSON())
+        res.json(notes)
+    })
 })
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })

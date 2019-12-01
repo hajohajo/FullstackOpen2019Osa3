@@ -6,12 +6,14 @@
 # * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
 # * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
 
-POST http://localhost:3001/api/persons
-Content-Type: application/json
+GET http://localhost:3001/api/persons
 
-{
-  "name": "Pekka Posteljooni",
-  "number": "050 0001111"
-}
+#POST http://localhost:3001/api/persons
+#Content-Type: application/json
+#
+#{
+#  "name": "Pekka Posteljooni",
+#  "number": "050 0001111"
+#}
 
 ###
