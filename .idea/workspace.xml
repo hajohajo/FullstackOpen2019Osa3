@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b9373e2-2349-4fcc-a04d-969886b1d254" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/person.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/person.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +203,7 @@
       <workItem from="1574848430730" duration="1291000" />
       <workItem from="1574849784164" duration="4031000" />
       <workItem from="1574858721099" duration="5279000" />
-      <workItem from="1574935359442" duration="18131000" />
+      <workItem from="1574935359442" duration="19000000" />
     </task>
     <task id="LOCAL-00001" summary="3.1 puhelinluettelon backend step1">
       <created>1574855899944</created>
@@ -363,7 +359,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575213503305</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="3.15, 3.16 ja 3.17*: poistaminen ja päivittäminen backendiin, virheidenkäsittely middlewareen">
+      <created>1575216000436</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1575216000436</updated>
+    </task>
+    <task id="LOCAL-00024" summary="3.15, 3.16 ja 3.17*: poistaminen ja päivittäminen backendiin, virheidenkäsittely middlewareen">
+      <created>1575216016963</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1575216016963</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,6 +450,7 @@
     <MESSAGE value="3.11 Full stack toimii" />
     <MESSAGE value="3.12 MongoDB lisäys" />
     <MESSAGE value="3.13 ja 3.14 Operaatiot näyttämiselle ja lisäämiselle MongoDB" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.13 ja 3.14 Operaatiot näyttämiselle ja lisäämiselle MongoDB" />
+    <MESSAGE value="3.15, 3.16 ja 3.17*: poistaminen ja päivittäminen backendiin, virheidenkäsittely middlewareen" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.15, 3.16 ja 3.17*: poistaminen ja päivittäminen backendiin, virheidenkäsittely middlewareen" />
   </component>
 </project>

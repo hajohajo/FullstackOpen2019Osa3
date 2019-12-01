@@ -32,27 +32,34 @@ app.get('/', (req, res) => {
     res.send('<h1>Hello World!</h1>')
 })
 
-app.get('/api/persons', (req, res) => {
+app.get('/api/persons', (req, res, next) => {
     Person.find({})
         .then(returnedPersons => {
             notes = returnedPersons.map(person => person.toJSON())
             res.json(notes)
         })
+        .catch(error => next(error))
 })
 
-app.get('/info', (req, res) => {
-    const numberOfPersons = notes.length
-    const date = new Date()
-    res.send(
-        `<p>Phonebook has info for ${numberOfPersons} people</p> <p>${date}</p>`
-    )
+app.get('/info', (req, res, next) => {
+
+    Person.find({})
+        .then( returnedPersons => {
+            numberOfPersons = returnedPersons.length
+            const date = new Date()
+            res.send(
+                `<p>Phonebook has info for ${numberOfPersons} people</p> <p>${date}</p>`
+            )
+        })
+        .catch(error => next(error))
+
 })
 
 app.get('/api/persons/:id', (req, res, next) => {
     Person.findById(req.params.id)
         .then(returnedPerson => {
             if (returnedPerson) {
-                res.json(returnedPerson.toJSON)
+                res.json(returnedPerson.toJSON())
             } else {
                 res.status(404).end()
             }
